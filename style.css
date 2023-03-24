@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "KG Crossing A Line";
+    src: url("font/KGCrossingALine.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "KG She Persisted";
+    src: url("font/KGShePersisted.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Font color social media";
+    src: url("font/Font color social media.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("font/Avenir.otf") format("OpenType");
+}
+
+html {
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    background: rgba(0, 198, 248, 0.74);
+}
+
+h1 {
+    font-family: "KG Crossing A Line";
+    font-size: 10em;
+    font-weight: inherit;
+
+    padding-bottom: 70px;
+    padding-left: 80px;
+}
+
+h2 {
+    font-family: "KG Crossing A Line";
+    font-size: 10em;
+    font-weight: inherit;
+
+    padding-top: 90px;
+    padding-left: 560px;
+}
+
+h3 {
+    font-family: "KG She Persisted";
+    font-size: 2em;
+    font-weight: inherit;
+
+    padding-top: 330px;
+    padding-left: 593px;
+}
+
+h4 {
+    font-family: "KG She Persisted";
+    font-size: 1.75em;
+    font-weight: inherit;
+
+    padding-top: 680px;
+    padding-left: 160px;
+}
+
+h5 {
+    font-family: "Font color social media";
+    font-size: 4.5em;
+
+    padding-top: 575px;
+    padding-left: 80px;
+}
+
+h1, h2, h3, h4, h5 {
+    word-break: keep-all;
+    position: absolute;
+    user-select: none;
+}
+
+.canvas {
+    position: absolute;
+    align-self: center;
+    margin-left: 50%;
+}
+
+.dflt_button {
+    font-family: 'KG She Persisted';
+    font-size: 1em;
+    font-weight: inherit;
+
+    border-radius: 30px;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #E3E3E3;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    color: #E3E3E3;
+    background-color: rgba(162, 0, 255, 0.753);
+
+    position: absolute;
+
+    padding: 15px;
+    padding-left: 90px;
+    padding-right: 90px;
+
+    margin-left: 575px;
+}
+
+.dflt_button:active {
+    border-color: rgb(182, 182, 182);
+    color: rgb(182, 182, 182);
+    background-color: rgba(74, 0, 117, 0.904);
+}
+
+.clipboard {
+    user-select: none;
+    cursor: pointer;
+
+    position: absolute;
+
+    margin-top: 722.5px;
+    margin-left: 320px;
+}
+
+.dflt_tooltip {
+    overflow: hidden;
+
+    width: 250px;
+    height: 40px;
+
+    font-family: "Avenir";
+    font-size: 0.9em;
+    font-weight: inherit;
+
+    text-align: center;
+    
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 8px;
+    word-break: keep-all;
+    user-select: none;
+    color: rgba(227, 227, 227, 0.812);
+    background-color: rgba(37, 37, 37, 0.812);
+
+    position: absolute;
+
+    z-index: 1;
+    left: 307.5px;
+
+    transition-duration: 70ms;
+}
+
+.dflt_tooltipTxt {
+    position: relative;
+
+    top: 25%;
+}
+
+#pause_button {
+    margin-top: 620px;
+}
+
+#reset_button {
+    margin-top: 710px;
+}
+
+#pause_tooltip {
+    top: 630px;
+}
+
+#reset_tooltip {
+    top: 720px;
+}
+
+#clipboard_tooltip {
+    width: 150px;
+
+    top: 665px;
+    left: 260px;
+}
+
+#pause_button:hover + #pause_tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#reset_button:hover + #reset_tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#clipboard:hover + #clipboard_tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*.dflt_tooltipTail {
+    position: absolute;
+
+}*/

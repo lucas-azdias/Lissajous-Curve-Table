@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/icon.png">
+        <title>Lissajous Curve Table</title>
+    </head>
+
+    <body>
+        <div id="canvas" class="canvas"></div>
+        
+        <h1>Lissajous Curve</h1>
+        <h2>Table</h2>
+        <h3>from FunNy_LuAz</h3>
+        <h4>@FunNy_LuAz</h4>
+        <h5>t</h5>
+
+        <script>
+            //var clipboardText = navigator.clipboard.readText();
+            var clipboardMsg;
+
+            function pause() {
+                if (pauseVar == true) {
+                    pauseVar = false
+                    loop();
+                } else {
+                    pauseVar = true;
+                    noLoop();
+                }
+            }
+
+            function reset() {
+                start = 0;
+
+                angle = [0, 0, 0, 0];
+
+                points_lcl = [];
+                curves = [];
+
+                if (pauseVar == true) {
+                    pauseVar = false;
+                    loop();
+                }
+            }
+
+            function copyToClipboard() {
+                navigator.clipboard.writeText("@FunNy_LuAz");
+                clipboardMsg = 'Copied';
+
+                document.getElementById('clipboard_tooltipTxt').innerHTML = clipboardMsg;
+            }
+
+            function clipboardTooltipDfnr() {
+                //clipboardText = navigator.clipboard.readText();
+                
+                //if (clipboardText == "@FunNy_LuAz") {
+                //    clipboardMsg = 'Already Copied';
+                //} else {
+                //    clipboardMsg = 'Copy to clipboard: &ldquo;@FunNy_LuAz&rdquo;';
+                //}
+                
+                clipboardMsg = 'Copy to clipboard'; //'Copy to clipboard: &ldquo;@FunNy_LuAz&rdquo;'
+
+                document.getElementById('clipboard_tooltipTxt').innerHTML = clipboardMsg;
+            }
+        </script>
+
+        <button id="pause_button" onclick="pause()" type="button" class="dflt_button">
+            <span class="dflt_txt">Pause</span>
+        </button>
+        <div id="pause_tooltip"class="dflt_tooltip">
+            <span class="dflt_tooltipTxt">Pause and unpause the simulation</span>
+        </div>
+
+        <button id="reset_button" onclick="reset()" type="button" class="dflt_button">
+            <span class="dflt_txt">Reset</span>
+        </button>
+        <div id="reset_tooltip" class="dflt_tooltip">
+            <span class="dflt_tooltipTxt">Reset the simulation</span>
+        </div>
+
+        <img id="clipboard" onmouseover="clipboardTooltipDfnr()" onclick="copyToClipboard()" class="clipboard" src="img/clipboard-icon.png">
+        <div id="clipboard_tooltip" class="dflt_tooltip">
+            <span id="clipboard_tooltipTxt" class="dflt_tooltipTxt"></span>
+        </div>
+    </body>
+
+</html>
